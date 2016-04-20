@@ -40,9 +40,12 @@ gulp.task('js', ()=> {
     .pipe(gulp.dest(destDir))
 })
 
-gulp.task('dev', ()=> {
-  gulp.start('js');
+gulp.task('css', ()=> {
+  gulp.src('node_modules/video.js/dist/video-js.min.css')
+    .pipe(gulp.dest(GPlayerPro))
+})
 
-  gulp.start('browser_sync');
-  watch(srcDir + '**/*.js', ()=> gulp.start('js'));
+gulp.task('production', ()=> {
+  gulp.start('GPlayerPro');
+  gulp.start('css');
 })
