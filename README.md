@@ -26,3 +26,6 @@ Partially at the front-end
 
 ## P2P capability to reduce CDN cost
 WebRTC Interface, interoperability with WebTorrent
+
+
+[GPlayer Test page](http://viewcloud.github.io/GPlayer/)
