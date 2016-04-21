@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>GPlayer Test</title>
-  <link rel="stylesheet" href="./video-js.min.css">
+  <link rel="stylesheet" href="../../dist/GPlayer/lib/video-js.min.css">
 </head>
 <body>
   <h2>RTMP</h2>
@@ -14,7 +14,7 @@
   <video id="GPlayer-dash" width=600 height=300 class="video-js vjs-default-skin" controls></video>
 
   <!-- <script src="./GPlayerPro.js"></script> -->
-<script src="./GPlayerAll.js"></script>
+<script src="../../dist/GPlayer/GPlayer.js"></script>
 <script>
   GPlayer('GPlayer-rtmp', {
     'type': 'rtmp/mp4',
@@ -24,8 +24,8 @@
   })
   GPlayer('GPlayer-hls', {
     'type': 'application/x-mpegURL',
-    // 'src': 'http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8',
-    'src': 'http://hls.ws.sumeme.com/meme/13333_a/playlist.m3u8',
+    'src': 'http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8',
+    // 'src': 'http://hls.ws.sumeme.com/meme/13333_a/playlist.m3u8',
     label: 'hls'
   })
   GPlayer('GPlayer-dash', {
