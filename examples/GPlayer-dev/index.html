@@ -18,24 +18,25 @@
   <h2>MPEG-DASH</h2>
   <video id="GPlayer-dash" width=600 height=300 class="video-js vjs-default-skin" controls></video>
 
-<script src="../../src/GPlayer.js"></script>
+<script src="./GPlayerDev.js"></script>
 <script>
-  GPlayer('GPlayer-rtmp', {
+  var GP = new GPlayer('GPlayer-rtmp', {
     'type': 'rtmp/mp4',
     'src': 'http://movie.ks.js.cn/flv/other/1_0.mp4',
     label: 'rtmp',
     'isvr': 'false'
   })
-  GPlayer('GPlayer-hls', {
-    'type': 'application/x-mpegURL',
-    'src': 'http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8',
-    label: 'hls'
-  })
-  GPlayer('GPlayer-dash', {
-    'type': 'application/dash+xml',
-    'src': 'http://rdmedia.bbc.co.uk/dash/ondemand/testcard/1/client_manifest-events.mpd',
-    label: 'dash'
-  })
+  GP.init();
+  // GPlayer('GPlayer-hls', {
+  //   'type': 'application/x-mpegURL',
+  //   'src': 'http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8',
+  //   label: 'hls'
+  // })
+  // GPlayer('GPlayer-dash', {
+  //   'type': 'application/dash+xml',
+  //   'src': 'http://rdmedia.bbc.co.uk/dash/ondemand/testcard/1/client_manifest-events.mpd',
+  //   label: 'dash'
+  // })
 </script>
 </body>
 

@@ -7,6 +7,7 @@ export default {
         buildDir: __dirname + '/__build__/',
         destDir : __dirname + '/dist/',
         GPlayerPro: __dirname + '/examples/GPlayer-pro/',
+        GPlayerDev: __dirname + '/examples/GPlayer-dev/',
         jsDir: 'js/',
     },
     css: {

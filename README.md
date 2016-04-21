@@ -12,6 +12,7 @@ Fallback to Flash
 Fallback to Flash if the browser has no such capability
 ### MPEG-DASH
 Backed by Google ShakaPlayer or DASH.js, or resort to HTML5 Media Source Extensions (MSE)
+### 360˚/VR PlayBack
 
 ## Ping-delay and Speed-test functionality
 
@@ -26,6 +27,27 @@ Partially at the front-end
 
 ## P2P capability to reduce CDN cost
 WebRTC Interface, interoperability with WebTorrent
+
+-------------------------------------------------------------------
+We should do some work before use `videojs-contrib-dash`
+
+```
+  cd ./node_modules/videojs-contrib-dash
+
+  // this command will run `grunt build`, but there is no `test` directory, so delete `test options` in `gruntfile.js`
+  npm install
+
+  // we should annotate some code in /src/videojs-dash.js
+  grunt build
+```
+
+As well use `videojs-contrib-hls`
+
+```
+  cd ./node_modules/videojs-contrib-hls
+
+  npm install
+```
 
 
 [GPlayer Test page](http://viewcloud.github.io/GPlayer/)
