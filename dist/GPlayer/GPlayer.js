@@ -92,7 +92,7 @@ function toTitleCase(string){
 }
 
 function loadScript(url, callback) {
-  let script = document.createElement('script');
+  var script = document.createElement('script');
   script.type = 'text/javascript';
 
   if (script.readyState) { // IE
