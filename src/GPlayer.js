@@ -57,6 +57,7 @@ function initFlashOptions (source, flsOptions) {
   videojs.options.flash.swf = "../../dist/GPlayer/swf/TanVodPlayer.swf";
   videojs.options.flash.flashVars = {
     'autostart': 'true',
+    'streamtype': 'MP4',
     'reportplaytime': '1',
     'isvr': source.isvr,
     // TODO: what is videoid
