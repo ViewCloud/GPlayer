@@ -12,6 +12,7 @@
   <video id="GPlayer-hls" width=600 height=300 class="video-js vjs-default-skin" controls></video>
   <h2>MPEG-DASH</h2>
   <video id="GPlayer-dash" width=600 height=300 class="video-js vjs-default-skin" controls></video>
+  <video id="Gplayer-test" width=600 height=300 class="video-js vjs-default-skin" controls></video>
 
   <!-- <script src="./GPlayerPro.js"></script> -->
 <script src="../../dist/GPlayer/GPlayer.js"></script>
@@ -32,6 +33,11 @@
     'type': 'application/dash+xml',
     'src': 'http://rdmedia.bbc.co.uk/dash/ondemand/testcard/1/client_manifest-events.mpd',
     label: 'dash'
+  })
+  GPlayer('Gplayer-test', {
+    'type': 'rtmp/mp4',
+    'src': 'http://cms.hzjl12chai.com/images/big-buck-bunny_trailer.webm',
+    label: 'rtmp'
   })
 </script>
 </body>
