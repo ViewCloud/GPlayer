@@ -4,7 +4,7 @@ export default {
     },
     dir: {
         srcDir: __dirname + '/src/',
-        buildDir: __dirname + '/__build__/',
+        buildDir: __dirname + '/build/',
         destDir : __dirname + '/dist/',
         GPlayerPro: __dirname + '/examples/GPlayer-pro/',
         GPlayerDev: __dirname + '/examples/GPlayer-dev/',
@@ -19,5 +19,6 @@ export default {
     javascript: {
         entry: ['index.js'],
         babel: { presets: ['es2015', 'stage-0'] }
-    }
+    },
+    sdkName: 'GPlayer'
 };

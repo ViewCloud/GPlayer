@@ -20,7 +20,8 @@
     'type': 'rtmp/mp4',
     'src': 'http://movie.ks.js.cn/flv/other/1_0.mp4',
     label: 'rtmp',
-    'isvr': 'false'
+    'isvr': 'false',
+    'token': '1234455667' // 区别free,payId
   })
   GPlayer('GPlayer-hls', {
     'type': 'application/x-mpegURL',
@@ -35,5 +36,11 @@
   })
 </script>
 </body>
-
+<div id="player" style="width:100%;height:450px;">
+    <script type="text/javascript" charset="utf-8" src="http://yuntv.letv.com/player/live/blive.js"></script>
+    <script>
+        var player = new CloudLivePlayer();
+        player.init({activityId:"A20160426000019i"});
+    </script>
+</div>
 </html>

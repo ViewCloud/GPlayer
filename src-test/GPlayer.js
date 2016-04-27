@@ -17,6 +17,10 @@ var GPlayer = function(id, source, vjsOptions, flsOptions) {
   });
 }
 
+Gplayer.prototype.getUserIp = function() {
+  
+}
+
 // dynamic load plugin js by the label of media
 function dynamicLoadPluginJs(source, callback) {
   var label = source.label ? source.label : getStream(source.type);

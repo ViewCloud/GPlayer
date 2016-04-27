@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GPlayer Test</title>
+  <link rel="stylesheet" href="./GPlayer/lib/video-js.min.css">
+  <!-- <script src="./GPlayer/lib/video.min.js"></script> -->
+</head>
+<body>
+  <h2>RTMP</h2>
+  <!-- <video id="GPlayer-rtmp" width=600 height=300 class="video-js vjs-default-skin" controls></video> -->
+  <h2>HLS</h2>
+  <video id="GPlayer-hls" width=600 height=300 class="video-js vjs-default-skin" controls></video>
+  <h2>MPEG-DASH</h2>
+  <!-- <video id="GPlayer-dash" width=600 height=300 class="video-js vjs-default-skin" controls></video> -->
+
+  <!-- <script src="./GPlayerPro.js"></script> -->
+<script src="./GPlayer/app.js"></script>
+<script id="gplayer">
+  // GPlayer('GPlayer-rtmp', {
+  //   'type': 'rtmp/mp4',
+  //   'src': 'http://movie.ks.js.cn/flv/other/1_0.mp4',
+  //   label: 'rtmp',
+  //   'isvr': 'false',
+  //   'token': '1234455667' // 区别free,payId
+  // })
+  GPlayer('GPlayer-hls', {
+    'type': 'application/x-mpegURL',
+    'src': 'http://sample.vodobox.net/skate_phantom_flex_4k/skate_phantom_flex_4k.m3u8',
+    // 'src': 'http://hls.ws.sumeme.com/meme/13333_a/playlist.m3u8',
+    label: 'hls'
+  })
+  // GPlayer('GPlayer-dash', {
+  //   'type': 'application/dash+xml',
+  //   'src': 'http://rdmedia.bbc.co.uk/dash/ondemand/testcard/1/client_manifest-events.mpd',
+  //   label: 'dash'
+  // })
+</script>
+</body>
+<!-- <div id="player" style="width:100%;height:450px;">
+    <script type="text/javascript" charset="utf-8" src="http://yuntv.letv.com/player/live/blive.js"></script>
+    <script>
+        var player = new CloudLivePlayer();
+        player.init({activityId:"A20160426000019i"});
+    </script>
+</div> -->
+</html>
