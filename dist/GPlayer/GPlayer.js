@@ -23,7 +23,7 @@ f&&!this.lineHeight&&(this.lineHeight=13)}function m(a,b,c,d){function e(a,b){fo
 var GPlayer = function(id, source, vjsOptions, flsOptions) {
   dynamicLoadPluginJs(source, function() {
 
-    initFlashOptions(source, flsOptions);
+    // initFlashOptions(source, flsOptions);
     var player = videojs(id, vjsOptions);
     player.ready(function() {
       // should run src function first so the player can make sure which tech it can use
