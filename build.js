@@ -1,4 +1,6 @@
 import config from './config';
+// TODO: how to include
+import videojs from 'video.js';
 import sdk from './src/GPlayer/app.js';
 
 ((root) => {
@@ -7,5 +9,6 @@ import sdk from './src/GPlayer/app.js';
     sdk.init(sdkRef._config).then(sdkRef._ready.bind(sdkRef, sdk));
   } else {
     root[config.sdkName] = sdk;
+    root['videojs'] = videojs;
   }
 })(window);

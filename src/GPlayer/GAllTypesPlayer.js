@@ -1,8 +1,9 @@
-import {loadScript} from './utils.js';
+import {loadStyle, loadScript} from './utils.js';
+import videojs from 'video.js';
 
 export default class GAllTypesPlayer {
-  constructor (player, source, vjsOptions, flashOptions) {
-    this.player = player;
+  constructor (id, source, vjsOptions, flashOptions) {
+    this.id = id;
     this.source = source;
     this.vjsOptions = vjsOptions;
     this.flashOptions = flashOptions;
@@ -10,15 +11,18 @@ export default class GAllTypesPlayer {
 
   init () {
     this.dynamicLoadPluginJs(this.source, ()=> {
-      this.player.ready(()=> {
+      // init flash options
+      this.initFlashOptions()
+      let player = videojs(this.id, this.options);
+      player.ready(()=> {
         // should run src function first so the player can make sure which tech it can use
-        this.player.src(this.source);
+        player.src(this.source);
         // TODO: test currentTime avalibility
-        this.player.currentTime(0);
-        let techName_ = this.player.techName_;
+        player.currentTime(0);
+        let techName_ = player.techName_;
         if(techName_ != 'Html5') {
-          this.player.player_.bigPlayButton.hide();
-          this.player.controlBar.hide();
+          player.player_.bigPlayButton.hide();
+          player.controlBar.hide();
         }
       })
     })
@@ -47,5 +51,16 @@ export default class GAllTypesPlayer {
     return streamingFormats[type];
   }
 
-
+  initFlashOptions (source, flashOptions) {
+    videojs.options.flash.swf = "./GPlayer/lib/TanVodPlayer.swf";
+    videojs.options.flash.flashVars = {
+      'autostart': 'true',
+      'streamtype': 'MP4',
+      'reportplaytime': '1',
+      'isvr': this.source.isvr,
+      // TODO: what is videoid
+      'videoid': 'dbdf4ac3bed84f44a9bade194432f8de',
+      'file': this.source.src
+    };
+  }
 }
