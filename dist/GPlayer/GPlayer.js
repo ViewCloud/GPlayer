@@ -30,11 +30,11 @@ var GPlayer = function(id, source, vjsOptions, flsOptions) {
       player.src(source);
       // TODO: test currentTime avalibility
       player.currentTime(0);
-      var techName_ = player.techName_;
-      if(techName_ != 'Html5') {
-        player.player_.bigPlayButton.hide();
-        player.controlBar.hide();
-      }
+      // var techName_ = player.techName_;
+      // if(techName_ != 'Html5') {
+      //   player.player_.bigPlayButton.hide();
+      //   player.controlBar.hide();
+      // }
     })
   });
 }
