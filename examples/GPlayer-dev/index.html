@@ -18,7 +18,10 @@
   <h2>MPEG-DASH</h2>
   <video id="GPlayer-dash" width=600 height=300 class="video-js vjs-default-skin" controls></video>
 
-<script src="../../src/GPlayer.js"></script>
+<script>
+  videojs('GPlayer-rtmp').src('http://movie.ks.js.cn/flv/other/1_0.mp4');
+</script>
+<!-- <script src="../../src/GPlayer.js"></script>
 <script>
   GPlayer('GPlayer-rtmp', {
     'type': 'rtmp/mp4',
@@ -36,7 +39,7 @@
     'src': 'http://rdmedia.bbc.co.uk/dash/ondemand/testcard/1/client_manifest-events.mpd',
     label: 'dash'
   })
-</script>
+</script> -->
 </body>
 
 </html>
